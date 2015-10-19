@@ -2,18 +2,24 @@
   "name": "template-string-processing-postcss",
   "version": "0.0.1",
   "description": "PostCSS helper function for babel-plugin-template-string-processing",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "MunGell/template-string-processing-postcss",
   "engines": {
     "node": ">=0.12"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf lib; mkdir lib",
+    "build": "./node_modules/.bin/babel src/index.js > lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run clean && npm run build"
   },
   "keywords": [
     "postcss",
     "babel"
   ],
   "author": "Shmavon Gazanchyan <sgazanchyan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.0.10"
+  }
 }
