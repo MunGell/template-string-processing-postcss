@@ -1,6 +1,6 @@
 {
   "name": "template-string-processing-postcss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PostCSS helper function for babel-plugin-template-string-processing",
   "main": "lib/index.js",
   "repository": "MunGell/template-string-processing-postcss",
